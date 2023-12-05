@@ -9,7 +9,15 @@ NumLenWind ← ◫2\+⊂0≡(⧻$"_")
 GetNumIs ← ≠0/+↘:↙⊙:⊃(⊢⇌)⊢:
 
 NumList ← ⊐/⊂ ≡(□⊐⊜parse) IsNum . Input
-AdjList ← /+⍉⊠IsAdj ∩⊚⊃IsNum IsSym Input
-
+AdjList ← /+⊠IsAdj ∩⊚⊃IsSym IsNum Input
 Score ← /+▽≡(GetNumIs AdjList) NumLenWind . NumList
+
 $"Part One: _" Score
+
+# part 2
+AdjList ← ⊠IsAdj ∩⊚⊃IsNum (=@*) Input
+GearTouchs ← ≠0≡⊐/+≡(□⊐↘:↙⊙:⊃(⊢⇌)⊢:AdjList)NumLenWind NumList
+GearInds ← ≡⊚⊏⊚ =2/+ :⍉ .GearTouchs
+Score ← /+/×⍉≡⊐⊏ GearInds □NumList
+
+$"Part Two: _" Score
