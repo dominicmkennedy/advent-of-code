@@ -7,12 +7,9 @@
 #include <tuple>
 #include <vector>
 
-void parse_ints() {}
-
 const std::tuple<std::vector<int>, std::vector<int>>
 read_file(const std::string &fname) {
   std::ifstream file(fname);
-
   std::vector<int> a, b;
 
   int a0, b0;
