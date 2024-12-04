@@ -6,3 +6,6 @@
 
 # haskell
 *.stack-work/
+
+# rust
+*/rs/target
