@@ -1,0 +1,17 @@
+cabal-version:      3.0
+name:               aoc2025
+version:            0.1.0.0
+license-file:       LICENSE
+author:             Dominic Kennedy
+build-type:         Simple
+
+common aoc-common
+  default-language: GHC2021
+  ghc-options:      -Wall
+  build-depends:
+      base ^>= 4.18
+
+executable day01
+  import:            aoc-common
+  hs-source-dirs:     app
+  main-is:            Day01.hs

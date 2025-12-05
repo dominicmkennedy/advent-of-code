@@ -6,6 +6,9 @@
 
 # haskell
 *.stack-work/
+*dist-newstyle/
 
 # rust
 */rs/target
+
+*input/
